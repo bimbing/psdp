@@ -1,0 +1,44 @@
+RewriteEngine on
+DirectoryIndex index.php
+
+RewriteRule ^home\.mu$ index.php
+RewriteRule ^home-page-(.*)\.mu$ index.php?p=$1 [L]
+RewriteRule ^pendaftaran\.mu$ index.php?view=pendaftaran
+RewriteRule ^hubungi-kami\.mu$ index.php?view=hubungi
+RewriteRule ^aksi-hubungi\.mu$ index.php?view=hubungiaksi
+RewriteRule ^page-(.*)\.mu$ index.php?view=halaman&seo=$1 [L]
+RewriteRule ^manage-page-(.*)\.mu$ index.php?view=halaman&id=$1 [L]
+RewriteRule ^form-login\.mu$ index.php?view=login
+RewriteRule ^langganan\.mu$ index.php?view=langganan
+RewriteRule ^langganan-page-(.*)\.mu$ index.php?view=langganan&p=$1 [L]
+RewriteRule ^upgrade-langganan\.mu$ index.php?view=upgradelangganan
+RewriteRule ^list-langganan\.mu$ index.php?view=listlangganan
+RewriteRule ^manage-hubungi\.mu$ index.php?view=kelolahubungi
+RewriteRule ^manage-hubungi-page-(.*)\.mu$ index.php?view=kelolahubungi&p=$1 [L]
+
+RewriteRule ^list-langganan-page-(.*)\.mu$ index.php?view=listlangganan&p=$1 [L]
+RewriteRule ^aktifkan-list-langganan-(.*)-(.*)\.mu$ index.php?view=listlangganan&aktif=$1&members=$2 [L]
+RewriteRule ^statistik-pengunjung\.mu$ index.php?view=statistik
+RewriteRule ^konfirmasi-(.*)\.mu$ index.php?view=konfirmasi&bayar=$1 [L]
+RewriteRule ^pesan-masuk\.mu$ index.php?view=pesanmasuk
+RewriteRule ^detail-pesan-masuk-(.*)\.mu$ index.php?view=detailpesanmasuk&id=$1 [L]
+RewriteRule ^account\.mu$ index.php?view=detailaccount
+RewriteRule ^detail-account-(.*)\.mu$ index.php?view=lihatdetailaccount&members=$1
+RewriteRule ^tambahkan-epaper\.mu$ index.php?view=tambahkanepaper
+RewriteRule ^tambahkan-epaper-page-(.*)\.mu$ index.php?view=tambahkanepaper&p=$1 [L]
+
+RewriteRule ^new-topic-php\.mu$ index.php?view=newtopic
+RewriteRule ^komentar-php\.mu$ index.php?view=komentartopic
+RewriteRule ^topic-(.*)\.mu$ index.php?view=detailforum&seo=$1 [L]
+RewriteRule ^ptopic-(.*)-page-(.*)\.mu$ index.php?view=detailforum&seo=$1&p=$2 [L]
+RewriteRule ^messages-php\.mu$ index.php?view=messages
+RewriteRule ^pmessages-php-(.*)\.mu$ index.php?view=messages&p=$1 [L]
+RewriteRule ^semua-members-php\.mu$ index.php?view=members
+RewriteRule ^detail-members-(.*)\.mu$ index.php?view=detailmembers&php=$1 [L]
+RewriteRule ^members-php-page-(.*)\.mu$ index.php?view=members&p=$1 [L]
+RewriteRule ^upload-foto-php\.mu$ index.php?view=uploadfoto
+RewriteRule ^logout\.mu$ logout.php
+
+RewriteRule ^account\.mu$ index.php?view=account
+RewriteRule ^pesan-ke-(.*)\.mu$ index.php?view=pesan&id=$1 [L]
+RewriteRule ^bantuan-php\.mu$ index.php?view=help
